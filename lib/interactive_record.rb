@@ -54,8 +54,11 @@ class InteractiveRecord
   end
   
   def self.find_by(options={})
-    binding.pry
-    sql = "<SELECT></SELECT>
+    
+    key = options.keys.first.to_s
+    value = options.values.first
+    sql = "SELECT * FROM #{self.table_name} WHERE #{key} = #{value}"
+    DB[:conn].execute(sql)
   end
     
 end
