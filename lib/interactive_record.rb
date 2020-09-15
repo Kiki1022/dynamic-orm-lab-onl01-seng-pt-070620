@@ -54,7 +54,6 @@ class InteractiveRecord
   end
   
   def self.find_by(options={})
-    
     key = options.keys.first.to_s
     value = options.values.first
     sql = "SELECT * FROM #{self.table_name} WHERE #{key} = '#{value}'"
