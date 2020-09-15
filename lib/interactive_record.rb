@@ -55,6 +55,7 @@ class InteractiveRecord
   
   def self.find_by(options={})
     binding.pry
+    sql = "<SELECT></SELECT>
   end
     
 end
